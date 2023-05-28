@@ -13,6 +13,14 @@
 #define ENB2_PK2 8
 #define SD2_PK2 9
 
+#define DE1 A0
+#define DE2 A1
+#define DE3 A2
+#define DE4 A3
+
+#define SDA A4
+#define SCl A5
+
 #define PINO_LED 13
 
 #define CENTRO_CONE 320
