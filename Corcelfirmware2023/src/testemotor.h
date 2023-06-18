@@ -5,10 +5,13 @@
 void testeMotor() {
     while (true) {
 
-        enablePKS(60000,60000);
-        delay(5000);
-        enablePKS(-60000,-60000);
-        delay(5000);
-
+        FW_PKS.writeMicroseconds(2000);
+        ANG_PKS.writeMicroseconds(1000);
+        delay(1000);
+        FW_PKS.writeMicroseconds(2000);
+        ANG_PKS.writeMicroseconds(2000);
+        delay(1000);
+        FW_PKS.writeMicroseconds(1500);
+        ANG_PKS.writeMicroseconds(1500);
     }
 }

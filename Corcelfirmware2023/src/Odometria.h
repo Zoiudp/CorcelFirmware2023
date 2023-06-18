@@ -6,7 +6,7 @@
 #include <defines.h>
 
 double raioRoda = 30;
-double voltas, distEsq, distDir;
+double voltas, distEsq, distDir, distAnt, distPercorrido;
 long positionEsq, positionDir, newPosEsq, newPosDir;
 Encoder ENCESC(DE1, DE2);
 Encoder ENCDIR(DE3, DE4);
@@ -18,10 +18,16 @@ double getDistPercorrida(Encoder encoder, long position, long newPos, double dis
     {
         position = newPos;
     }
+    voltas = position/400; 
 
     dist = (2 * raioRoda * PI) * voltas;
-    
-    return dist;
+    distPercorrido = dist - distAnt;
+    distAnt = dist;
+
+    Serial.println("Distância Percorrida roda: ");
+    Serial.println(distPercorrido);
+
+    return distPercorrido;
 }
 
 void getPosicao(Encoder encoder, long position, long newPos){

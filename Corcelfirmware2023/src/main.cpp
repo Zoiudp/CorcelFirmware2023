@@ -17,5 +17,6 @@ void loop() {
   testeMotor();
   getPosicao(ENCDIR,positionDir,newPosDir);
   getPosicao(ENCESC,positionEsq,newPosEsq);
+  
 }
 
